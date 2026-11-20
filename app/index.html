@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23f59e0b' font-family='sans-serif' font-weight='bold'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="subtitle">Grand Theft Auto VI — all 55 PlayStation 5 trophies, with a guide, a roadmap and a tracker. Works fully offline; your progress never leaves this browser.</p>
+    </div>
+    <div class="progress-box" aria-live="polite">
+      <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="gradeCounts"></span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-actions">
+        <label class="spoiler-label"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-label">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+      </div>
+      <p class="saved-note" id="savedNote">Progress is saved in this browser as you tick trophies off.</p>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <button id="tabChecklist" type="button" class="tab active" aria-selected="true">Checklist</button>
+    <button id="tabRoadmap" type="button" class="tab" aria-selected="false">Roadmap to Platinum</button>
+  </nav>
+</header>
+
+<main>
+  <section id="checklistSection" aria-label="Trophy checklist">
+    <div class="controls">
+      <label class="search-label">Search <input id="searchInput" type="search" placeholder="Trophy name, mission or keyword…" autocomplete="off"></label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check-label"><input type="checkbox" id="hideEarned"> Hide earned</label>
+    </div>
+    <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="kind active">All</button>
+      <button type="button" data-kind="story" class="kind">Story</button>
+      <button type="button" data-kind="missable" class="kind">Missable</button>
+      <button type="button" data-kind="collectibles" class="kind">Collectibles</button>
+      <button type="button" data-kind="activities" class="kind">Activities</button>
+      <button type="button" data-kind="crime" class="kind">Crime &amp; Heists</button>
+      <button type="button" data-kind="side" class="kind">Side quests</button>
+      <button type="button" data-kind="misc" class="kind">Misc</button>
+      <button type="button" data-kind="online" class="kind">Online</button>
+    </div>
+    <p class="count-line" id="countLine"></p>
+    <p class="empty-note" id="emptyNote" hidden>No trophies match this filter. There are no online trophies in GTA VI — all 55 are offline single-player, so the Online filter is empty on purpose.</p>
+    <div id="trophyList" class="trophy-list"></div>
+  </section>
+
+  <section id="roadmapSection" aria-label="Roadmap to the platinum" hidden>
+    <div class="roadmap-head">
+      <h2>Roadmap to the Platinum</h2>
+      <p id="roadmapFacts" class="roadmap-facts"></p>
+    </div>
+    <div id="roadmapStages" class="roadmap-stages"></div>
+    <div class="roadmap-warnings">
+      <h3>Watch out for</h3>
+      <ul id="roadmapWarnings"></ul>
+    </div>
+    <p class="roadmap-sources">Roadmap facts and times: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vI-trophy-guide-roadmap/">PowerPyx</a>, <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer</a>, <a href="https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap">Push Square</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Official trophy names and descriptions are shown as PlayStation publishes them. Every guide is written in our own words for this entry and names its sources beside it — never copied from them. A few trophies are still unconfirmed by the guides we cite; those say so in their guide instead of guessing.</p>
+  <p class="footer-sources">Sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vI-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> · <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap</a> · <a href="https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap">Push Square — GTA 6 Trophy Guide and Roadmap</a> · <a href="https://gamemapa.com/en/gta-6/guides/gta-6-trophy-achievement-list/">GameMapa — All 55 GTA 6 Trophies</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
